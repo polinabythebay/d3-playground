@@ -103,4 +103,4 @@ function updateTree() {
 d3.selectAll('.regenerate')
   .on('click', regenerate);
 
-regenerate(true);
+// regenerate(true);

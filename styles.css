@@ -1,5 +1,5 @@
 /* your beautiful css styling goes here! */
-text {
+/*text {
   font: bold 48px monospace;
 }
 
@@ -9,11 +9,11 @@ text {
 
 .update {
   fill: #333;
-}
+}*/
 
 
 /* binary tree */
-
+/*
 body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   width: 840px;
@@ -30,4 +30,15 @@ svg {
 path, line {
   stroke: #777;
 }
+
+div.bar {
+        display: inline-block;
+        width: 20px;
+        height: 75px;
+        background-color: teal;
+        margin-right: 2px;
+      }*/
+
+
+
 
