@@ -1,0 +1,13 @@
+/* your beautiful css styling goes here! */
+text {
+  font: bold 48px monospace;
+}
+
+.enter {
+  fill: green;
+}
+
+.update {
+  fill: #333;
+}
+
