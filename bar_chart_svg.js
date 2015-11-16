@@ -31,9 +31,7 @@ svg.selectAll("rect")
     return "rgb(0, 0, " + (d * 10) + ")";
    });
 
-
 //adding text elements to my rectangles
-
 svg.selectAll("text")
    .data(dataset)
    .enter()
