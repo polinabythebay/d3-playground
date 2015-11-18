@@ -1,16 +1,16 @@
 // Tree configuration
 var branches = [];
 var seed = {'index': 0, 
-            'x': 420, 
-            'y': 600, 
+            'x': 430,  //420
+            'y': 600, //600
             'angle': 0, 
-            'length': 130, 
+            'length': 130, //130
             'depth':0};
 var leftAngleDelta = -0.5; 
 var rightAngleDelta = 0.5; 
 var lengthDelta = 0.8; 
 var random = 0.7;
-var maxDepth = 10;
+var maxDepth = 7;
 
 // Return endpoint of branch
 function endPoint(b) {
@@ -53,54 +53,60 @@ function createTree(branch) {
   createTree(newBranch);
 }
 
-function regenerate(initialise) {
-  branches = [];
-  createTree(seed);
-  initialise ? create() : updateTree();
-}
+/* ------- SETTINGS -------*/
 
-// D3
 function x1(d) {return d.x;}
 function y1(d) {return d.y;}
 function x2(d) {return endPoint(d).x;}
 function y2(d) {return endPoint(d).y;}
-function highlightParents(d) {
-  var colour = d3.event.type === 'mouseover' ? 'green' : '#777';
-  var depth = d.depth;
-  for(var i = 0; i <= depth; i++) {
-    d3.select('#id-'+parseInt(d.index)).style('stroke', colour);
-    d = branches[d.parent];
-  } 
-}
 
 function create() {
-  d3.select('svg')
-    .selectAll('line')
-    .data(branches)
-    .enter()
-    .append('line')
-    .attr('x1', x1)
-    .attr('y1', y1)
-    .attr('x2', x2)
-    .attr('y2', y2)
-    .style('stroke-width', function(d) {return parseInt(maxDepth + 1 - d.depth) + 'px';})
-    .attr('id', function(d) {return 'id-'+d.index;})
-    .on('mouseover', highlightParents)
-    .on('mouseout', highlightParents);
+
+  var svg = d3.select('body')
+              .append("svg")
+              .selectAll('line')
+              .data(branches)
+              .enter()
+              .append('line')
+              //ANIMATION
+              .transition()
+              .duration(800)
+              .delay(function (d, i) {
+                return i * 2;
+              })
+              .attr('x1', x1)
+              .attr('y1', y1)
+              .attr('x2', x2)
+              .attr('y2', y2)
+              .style('stroke-width', function(d) {
+                return parseInt(maxDepth + 1 - d.depth) + 'px';
+              })
+              .attr('id', function(d) {
+                return 'id-'+d.index;
+              });
+
 }
 
-function updateTree() {
+function update() {
   d3.select('svg')
     .selectAll('line')
     .data(branches)
     .transition()
+    .duration(800)
+    .delay(function (d, i) {
+        return i * 2;
+      })
     .attr('x1', x1)
     .attr('y1', y1)
     .attr('x2', x2)
-    .attr('y2', y2);
+    .attr('y2', y2)
 }
 
-d3.selectAll('.regenerate')
-  .on('click', regenerate);
+function regenerate(initialise) {
+  branches = [];
+  createTree(seed);
+  initialise ? create() : update();
+}
 
-// regenerate(true);
+
+

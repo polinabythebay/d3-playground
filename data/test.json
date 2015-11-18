@@ -1,0 +1,61 @@
+{
+  "word": "CS",
+  "children": [
+    {
+      "word": "Data Structures",
+      "children": [
+        {
+          "word": "Array"
+        },
+        {
+          "word": "Stack"
+        },
+        {
+          "word": "LinkedList"
+        },
+        {
+          "word": "HashTable"
+        },
+        {
+          "word": "Trees",
+          "children": [
+          {
+          "word": "Red Black Tree"
+          },
+          {
+          "word": "Binary Search Tree"
+          },
+          {
+          "word": "AVL Tree"
+          }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "Algorithms",
+      "children": [
+        {
+          "word": "Sorting",
+             "children": [
+          {
+          "word": "MergeSort"
+          },
+          {
+          "word": "SelectionSort"
+          },
+          {
+          "word": "InsertionSort"
+          }
+          ]
+        },
+        {
+          "word": "N-queens"
+        },
+        {
+          "word": "Primality Test"
+        }
+      ]
+    }
+  ]
+}

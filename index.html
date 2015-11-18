@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' type='css' href='styles.css'>
-    <script src="d3.js" charset="utf-8"></script>
+    <link rel='stylesheet' type='css' href='styles/styles.css'>
+    <script src='lib/underscore.js'></script>
+    <script src='lib/moment.js'></script>
+    <script src='lib/jquery.js'></script>
+    <script src="lib/d3.js" charset="utf-8"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src='data/dataSets.js'></script>
+    <script src='visualizations/draw_tree.js'></script>
+     <script src='visualizations/area_chart.js'></script>
+    <script src='visualizations/tree_chart.js'></script>
+    <script src='visualizations/bar_chart.js'></script>
+    <script src='visualizations/pie_chart.js'></script>
+    <script src='init.js'></script>
   </head>
   <body>
-  <!--   <div class="graph">
-    </div>
 
-      for binary tree
-    <div id="chart">
-      <svg></svg>
-    </div> -->
+    <div class="container">
+      
+        <h1>D3.js Visualizations</h1>
+        <button class="barChart">Bar Chart</button>
+        <button class="areaChart">Area Chart</button>
+        <button class="pieChart">Pie Chart</button>
+        <button class="tree">Tree Chart</button>
+        <button class="growTree">Grow a Tree</button>
+        <button class="regenerate">Regenerate Tree</button>
+      <p>
+      <div class="title"></div>
+      <p>
 
-    <!-- <button class="regenerate">Regenerate</button> -->
+      <!-- CSS interaction via a tooltip for the Pie Chart -->
+      <div id="tooltip" class="hidden">
+        </p>
+        <p><span id="value"></span></p>
+      </div>
 
-     <!--  various D3 incarnations -->
-
-    <!-- <div class="bar"></div> -->
-
-    <script>
-    </script>
-
-    <script src='scatter_plot_svg.js'></script>
-    <!-- // <script src='bar_chart_svg.js'></script> -->
-    <script src='binary_tree.js'></script>
-    <script src='general_update_pattern_1.js'></script>
-    <script src='dataSets.js'></script>
-    <script src='graphs.js'></script>
-
+  </div>
   </body>
 </html>

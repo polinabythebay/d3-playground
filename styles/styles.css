@@ -1,0 +1,165 @@
+/* your beautiful css styling goes here! */
+
+/* ------- Main -------*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: auto;
+  vertical-align: middle;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+/*  text-align: center;*/
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* fixed height of footer */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* ------- PIE Chart -------*/
+
+body {
+  font: 15px sans-serif;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+text {
+    font-family: sans-serif;
+    font-size: 12px;
+    /*fill: white;*/
+}
+#tooltip {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4) pointer-events: none;
+  line-height: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+#tooltip.hidden {
+    opacity: 0;
+}
+
+#tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* ------- Tree -------*/
+
+.node circle {
+  cursor: pointer;
+  /*fill: #fff;*/
+  /*stroke: steelblue;*/
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 11px;
+}
+
+path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+/* ------- Bar Chart -------*/
+
+.d3-tip {
+  line-height: 1;
+  /*font-weight: bold;*/
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+/* ------- Drawing Tree -------*/
+
+svg {
+  width: 960px;
+  height: 500px;
+  font-family: helvetica, sans-serif;
+}
+
+path, line {
+  stroke: #6c71c4;
+}
+
+/* ------- Area Chart -------*/
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.area {
+  fill: steelblue;
+}
+
